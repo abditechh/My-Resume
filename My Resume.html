@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <style>
+      /* General body styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6; /* Increased line-height for readability */
+        padding-bottom: 70px; /* Ensure space for footer */
+      }
+
+      /* Header styles */
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 3px;
+      }
+
+      h1 img {
+        width: 230px; /* Set a fixed size for the image */
+        height: 310px; /* Keep the image's height the same as the width */
+        border-radius: 50%; /* Make the image circular */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+        margin-top: 15px; /* Add some space between the text and image */
+        border: 3px solid #2c3e50; /* Add a subtle border around the image */
+      }
+
+      /* Section headers */
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 8px;
+        margin-bottom: 2px; /* Increased margin for spacing */
+      }
+
+      /* Styling for paragraphs */
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 20px; /* Increased margin for more space */
+        line-height: 1.6; /* Increased line-height */
+        padding-left: 1%;
+      }
+
+      /* List styling */
+      ul {
+        list-style-type: none;
+        padding-left: 29px;
+      }
+
+      ul li {
+        font-size: 1.1rem;
+        margin-bottom: 1px; /* Increased margin for more spacing between items */
+      }
+
+      /* Horizontal line styling */
+      hr {
+        border: 0;
+        border-top: 2px solid #bdc3c7;
+        margin: 3px 0; /* Added extra margin for spacing */
+      }
+
+      /* Link styles */
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer styling */
+      footer {
+        text-align: center;
+        padding: 2px;
+        background-color: #2c3e50;
+        color: white;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      /* Responsive styling */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p,
+        ul li {
+          font-size: 1rem;
+        }
+
+        hr {
+          margin: 20px 0;
+        }
+      }
+
+      .table {
+        width: 400px;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      /* Specific class styling */
+      .zusammenfassung,
+      .ausbildung,
+      .berufserfahrung,
+      .fähigkeiten,
+      .berufserfahrung,
+      .kompetenzbewertung,
+      .sonstiges
+      
+      .hobbies {
+        padding-left: 20px; /* Added padding for better alignment */
+        padding-right: 20px; /* Ensured content doesn't touch the edge */
+      }
+     
+      .sonstiges {
+        padding-left: 20px; /* Added padding for better alignment */
+        padding-right: 20px
+      }
+      .hobbies {
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Abdi Abdirashid</h1>
+    <h1><img src="img.png" height="250" alt="Photo" /></h1>
+
+    <h2 class="zusammenfassung">Zusammenfassung</h2>
+    <p class="zusammenfassung"> Erfahrener Fachmann in der Betriebsunterhaltung, Montage und Produktion mit ausgeprägten handwerklichen Fähigkeiten. 
+       Leidenschaftlich<br /> im Drohnenfliegen und in der Videobearbeitung, mit kontinuierlicher Entwicklung meiner kreativen und technischen Fähigkeiten.
+    </p>
+
+   
+
+    <h2 class="berufserfahrung">Berufserfahrung</h2>
+    <ul>
+      <li>12/2024 – heute: Arbeitssuchend</li>
+      <li>
+        09/2024 – 12/2024: Zimmermann bei Egli Zimmerei (Befristetes Arbeitsverhältnis)
+      </li>
+      <li>
+        05/2023 – 09/2024: Temporäre Einsätze bei Qero AG und Topas Personal
+      </li>
+      <li>11/2023 – 05/2024: Büroangestellter, Onyx Restaurant in Baar, Zug</li>
+      <li>
+        01/2023 – 10/2023: Temporäre Einsätze bei verschiedenen Firmen (Alle befristet)
+      </li>
+      <li>
+        08/2022 – 12/2022: Montagearbeiter, V-ZUG, Zug (Befristetes Arbeitsverhältnis)
+      </li>
+      <li>
+        01/2022 – 07/2022: Fahrer B/E, Galliker Transport AG, Altishofen (Befristetes Arbeitsverhältnis)
+      </li>
+      <li>
+        08/2021 – 12/2021: Reinigungskraft, Schule Hagendorn (Befristetes Arbeitsverhältnis)
+      </li>
+    </ul>
+ <h2 class="ausbildung">Ausbildung</h2>
+    <ul>
+      <li>
+        08/2019 – 07/2021: Lehre als Unterhaltspraktiker EBA, Gemeinde Cham, Zug
+      </li>
+      <li>08/2017 – 07/2019: Brückenangebot, Zug</li>
+      <li>02/2013 – 08/2015: Sekundarschule, Kenia, Nairobi</li>
+      <li>03/2007 – 05/2010: Primarschule, Somalia</li>
+    </ul>
+    <h2 class="fähigkeiten">Fähigkeiten</h2>
+    <ul>
+      <li>Betriebsunterhalt</li>
+      <li>Zimmerei und Holzarbeiten</li>
+      <li>Montage und Produktion</li>
+      <li>Technische Fertigkeiten in verschiedenen handwerklichen Berufen</li>
+      <li>Fahren und Logistik (Chauffeur B/E)</li>
+      <li>Büroverwaltung und Unterstützung</li>
+      <li>Kundenservice und Gastgewerbe</li>
+      <li>Reinigung und Gebäudemanagement</li>
+      <li>Drohnenfliegen und Luftaufnahmen</li>
+      <li>Videobearbeitung und Multimedia-Produktion</li>
+      <li>Anpassungsfähigkeit an temporäre und befristete Tätigkeiten</li>
+      <li>Mehrsprachige Kommunikation (Deutsch, Englisch, Somali)
+      </li>
+    </ul>
+
+    <h2 class="kompetenzbewertung">Kompetenzbewertung</h2>
+    <ul>
+      <li>Kundenservice: ⭐️⭐️⭐️⭐️⭐️</li>
+      <li>Microsoft Office Suite:  ⭐️⭐️⭐️</li>
+      <li>Organisationsfähigkeiten:⭐️⭐️⭐️⭐️</li>
+    </ul>
+
+    <h2 class="sonstiges">Sonstiges</h2>
+
+    <table class="table">
+      <tr class="hobbies">
+        <th><a href="hobbies.html" target="_blank">Hobbies</a></th>
+        <th><a href="contact.html" target="_blank">ContactMe</a></th>
+      </tr>
+      <tr>
+        <th><a href="Motivationsschreiben.html" target="_blank">Motivationsschreiben</th>
+       
+        <th><a href="Ausweis & Führerausweis_compressed-2-imageonline.co-merged-min.png" target="_blank">Dokumentenausweis</th>
+      </tr>
+    </table>
+    
+    <footer>
+      <p>© Abdi Abdirashid. All rights reserved</p>
+    </footer>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
