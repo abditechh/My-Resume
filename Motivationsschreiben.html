@@ -34,7 +34,7 @@
 
       p {
         margin: 1px 0;
-        text-align: justify; /* Ensures text is straight and aligned */
+        text-align: justify;
         line-height: 1.7;
         font-size: 16px;
         margin-top: 3%;
@@ -49,7 +49,7 @@
       }
 
       .contact-info {
-        max-width: 900px;
+        max-width: 907px;
         margin: 0 auto;
         padding: 15px;
         border: none;
@@ -67,14 +67,14 @@
         margin-top: 25px;
         margin-bottom: 10px;
       }
-      
+
       h1 img {
-        width: 218px; /* Set a fixed size for the image */
-        height: 310px; /* Keep the image's height the same as the width */
-        border-radius: 50%; /* Make the image circular */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
-        margin-top: 15px; /* Add some space between the text and image */
-        border: 3px solid #2c3e50; /* Add a subtle border around the image */
+        width: 218px;
+        height: 310px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 15px;
+        border: 3px solid #2c3e50;
         float: right;
         margin-left: 0%;
       }
@@ -85,15 +85,26 @@
         padding-left: 27%;
         font-size: 20px;
       }
+
+      .date {
+        font-size: 20px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
 
   <body>
     <div class="contact-info">
+      <!-- Insert Date Here -->
+     
+
       <h1>Abdi Abdirashid</h1>
       <h1><img src="img.png" height="200" alt="Me"></h1>
+     
       <h3>Stallikerstrasse 5a</h3>
-      <h3>8906 Bonstetten</h3>
+      <h3>8906 Bonstetten</h3> 
+      <div class="date" id="current-date"></div>
 
       <hr />
 
@@ -102,7 +113,7 @@
 
       <p>Allow me to briefly introduce myself: My name is Abdi Abdirashid, and I was born in a small town in southern Somalia called El Bur. Due to the conflicts in my home country, my family frequently relocated, requiring me to adapt to new school systems and environments. These experiences equipped me with valuable cultural knowledge and a high level of adaptability. Over the years, I lived in several African countries, including Kenya, Tanzania, and Ethiopia, which further shaped my ability to adjust quickly to new circumstances. At the age of 15, I moved to Switzerland after my uncle in the United Kingdom could no longer financially support our family. Settling into life in Switzerland was smooth for me, as I quickly focused on learning the language—one of my key strengths.</p>
 
-      <p>I am a trained maintenance worker and successfully completed my apprenticeship at the Kirchbühl School in the municipality of Cham. During my training, I performed a variety of tasks, such as vacuuming and mopping classrooms, conducting daily routine inspections, and cleaning staircases. I particularly enjoyed deep cleaning tasks, which required precision and efficiency. Additionally, I have worked in various roles, including as a janitor, cleaner, production worker at V-ZUG, construction helper, car transporter, and carpenter. These temporary assignments through staffing agencies have provided me with valuable experience and enhanced my adaptability and versatility.</p>
+      <p>I am a trained maintenance worker and successfully completed my apprenticeship at the Kirchbühl School in the municipality of Cham, Zug. During my training, I performed a variety of tasks, such as vacuuming and mopping classrooms, conducting daily routine inspections, and cleaning staircases. I particularly enjoyed deep cleaning tasks, which required precision and efficiency. Additionally, I have worked in various roles, including as a janitor, cleaner, production worker at V-ZUG, construction helper, car transporter, and carpenter. These temporary assignments through staffing agencies have provided me with valuable experience and enhanced my adaptability and versatility.</p>
 
       <p>I consider my greatest strengths to be my reliability, my precise and focused approach to work, and my ability to quickly learn new skills. I am a flexible and open-minded individual who enjoys taking on responsibility and working effectively both independently and as part of a team. I particularly value a positive work environment where collaboration and mutual support are prioritized.</p>
 
@@ -110,7 +121,7 @@
 
       <p>I look forward to the opportunity to share more about myself and my qualifications in a personal interview. I would also be happy to demonstrate my abilities during a trial day. Thank you for considering my application.</p>
 
-      <p>Kind regards,<br><br><img class="signature" src="Picture1.png" alt="signature"><br><br>Abdi Abdirashid</p> 
+      <p>Kind regards,<br><br><img class="signature" src="Picture1.png" alt="signature"><br><br>Abdi Abdirashid</p>
       <th><a href="Berufsattest Unterhaltspraktiker EBA-1.png" target="_blank">Diplom</a></th>
     </div>
 
@@ -120,5 +131,15 @@
       <tr>
       </tr>
     </table>
+
+    <script>
+      // Get current date in the format: Month Day, Year (e.g., January 25, 2025)
+      const currentDate = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const dateString = currentDate.toLocaleDateString('de-DE', options);  // Adjusting for German locale
+
+      // Display the date inside the "current-date" div
+      document.getElementById('current-date').innerText = dateString;
+    </script>
   </body>
 </html>
