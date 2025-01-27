@@ -241,7 +241,7 @@
       // Get current date in the format: Month Day, Year (e.g., January 25, 2025)
       const currentDate = new Date();
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      const dateString = currentDate.toLocaleDateString('de-DE', options);  // Adjusting for German locale
+      const dateString = currentDate.toLocaleDateString('en-US', options);  // Adjusting for German locale
 
       // Display the date inside the "current-date" div
       document.getElementById('current-date').innerText = dateString;
