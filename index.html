@@ -5,78 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
     <style>
-      /* General body styles */
       body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         color: #333;
         margin: 0;
         padding: 0;
-        line-height: 1.6; /* Increased line-height for readability */
-        padding-bottom: 70px; /* Ensure space for footer */
+        line-height: 1.6;
+        padding-bottom: 70px;
       }
-
-      /* Header styles */
       h1 {
         text-align: center;
         color: #2c3e50;
         margin-top: 3px;
       }
-
-      h1 img {
-        width: 230px; /* Set a fixed size for the image */
-        height: 310px; /* Keep the image's height the same as the width */
-        border-radius: 50%; /* Make the image circular */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
-        margin-top: 15px; /* Add some space between the text and image */
-        border: 3px solid #2c3e50; /* Add a subtle border around the image */
-      }
-
-      /* Section headers */
       h2 {
         color: #2c3e50;
         border-bottom: 2px solid #2c3e50;
         padding-bottom: 8px;
-        margin-bottom: 2px; /* Increased margin for spacing */
+        margin-bottom: 10px;
       }
-
-      /* Styling for paragraphs */
-      p {
-        font-size: 1.1rem;
-        margin-bottom: 20px; /* Increased margin for more space */
-        line-height: 1.6; /* Increased line-height */
-        padding-left: 1%;
+      .contact {
+        padding-left: 77%;
+        line-height: 1.8;
       }
-
-      /* List styling */
-      ul {
-        list-style-type: none;
-        padding-left: 29px;
+      .date {
+        padding-left: 78%;
+        line-height: 1.6;
+        margin-top: 25px;
       }
-
-      ul li {
-        font-size: 1.1rem;
-        margin-bottom: 1px; /* Increased margin for more spacing between items */
-      }
-
-      /* Horizontal line styling */
-      hr {
-        border: 0;
-        border-top: 2px solid #bdc3c7;
-        margin: 3px 0; /* Added extra margin for spacing */
-      }
-
-      /* Link styles */
-      a {
-        color: #3498db;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Footer styling */
       footer {
         text-align: center;
         padding: 2px;
@@ -86,225 +43,53 @@
         width: 100%;
         bottom: 0;
       }
-
-      /* Responsive styling */
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 1.8rem;
-        }
-
-        p,
-        ul li {
-          font-size: 1rem;
-        }
-
-        hr {
-          margin: 20px 0;
-        }
-      }
-
-      .table {
-        width: 400px;
-        text-align: left;
-        padding-left: 20px;
-      }
-
-      /* Specific class styling */
-      .zusammenfassung,
-      .ausbildung,
-      .berufserfahrung,
-      .fähigkeiten,
-      .berufserfahrung,
-      .kompetenzbewertung,
-      .sonstiges
-      
-      .hobbies {
-        padding-left: 20px; /* Added padding for better alignment */
-        padding-right: 20px; /* Ensured content doesn't touch the edge */
-      } 
-      .zusammenfassung {
-        line-height: 1.6;
-      }
-     
-      .sonstiges {
-        padding-left: 20px; /* Added padding for better alignment */
-        padding-right: 20px
-      }
-      .hobbies {
-        color: #520707;
-      }
-      .contact {
-        padding-left: 77%;
-        line-height: 1.8;
-      
-      }
-      .contact a{
-        color: #2422a9be;
-       
-       
-      }
-      .contact a, p {
-        line-height: 1.0;
-      }
-      .date {
-        padding-left: 78%;
-        line-height: 1.6;
-        margin-top: 25px;
-      }
-
-       .table {
-        width: 20%;
-        border-collapse: collapse;
-      }
-
-      .table th {
-        padding: 5px;
-        text-align: left;
-        padding-left: 20px;
-      }
-
-      .table a {
-        text-decoration: none; /* Remove the default underline */
-        color: #1310bcbe; /* Default text color */
-        position: relative; /* Position relative for the after element */
-        font-size: 16px;
-        cursor: pointer;
-      }
-
-      .table a:hover {
-        color: #007bff; /* Change color on hover */
-      }
-
-      /* Hover underline effect using the ::after pseudo-element */
-      .table a::after {
-        content: "";
-        position: absolute;
-        bottom: -2px; /* Refined positioning for the underline */
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: rgb(143, 39, 39);
-        transition: transform 0.3s ease-in-out;
-        transform: scaleX(0);
-        transform-origin: left center; /* Start scaling from left */
-      }
-
-      .table a:hover::after {
-        transform: scaleX(1);
-      }
-     
     </style>
   </head>
   <body>
-    
-    <body>
     <h1>Abdi Abdirashid</h1>
-    <h1><img src="img.png" height="250" alt="Photo" /></h1>
-
     <div class="contact">
-      <p class="bday">🎂 01.02.2000</p>
-      <p>
-        ☎️
-        <a href="tel:+41764597006">+41 76 459 70 06</a>
-      </p>
-      <p>
-        💌
-        <a href="mailto:abdi.abdirashid@hotmail.com"
-          >abdi.abdirashid@hotmail.com</a
-        >
-      </p>
-      <p class="adress">
-        📍
-        <a
-          href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten"
-          target="_blank"
-        >
-          Stallikerstrasse 5A, 8906 Bonstetten
-        </a>
-     <div class="date" id="current-date"></div>
-
-    <h2 class="zusammenfassung">Summery</h2>
-    <p class="zusammenfassung"> Experienced professional in operational maintenance, assembly, and production with strong craftsmanship skills.<br /> Passionate about drone flying and video editing, with continuous development of my creative and technical abilities.
-    </p>
-
-   
-
-    <h2 class="berufserfahrung">Work experience</h2>
+      <p>🎂 February 1, 2000</p>
+      <p>☎️ <a href="tel:+41764597006">+41 76 459 70 06</a></p>
+      <p>💌 <a href="mailto:abdi.abdirashid@hotmail.com">abdi.abdirashid@hotmail.com</a></p>
+      <p>📍 <a href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten" target="_blank">Stallikerstrasse 5A, 8906 Bonstetten</a></p>
+    </div>
+    <div class="date" id="current-date"></div>
+    
+    <h2>Summary</h2>
+    <p>Experienced professional in facility maintenance, assembly, and production with strong craftsmanship skills.<br>
+       Passionate about drone flying and video editing, continuously developing my creative and technical abilities.</p>
+    
+    <h2>Work Experience</h2>
     <ul>
-      <li>12/2024 – present: Job Seeker</li>
-      <li>09/2024 – 12/2024: Carpenter at Egli Carpentry (Fixed-Term Employment)</li>
-      <li>05/2023 – 09/2024: Temporary Assignments at Qero AG and Topas Personnel</li>
-      <li>11/2023 – 05/2024: Office Clerk, Onyx Restaurant in Baar, Zug</li>
-      <li>01/2023 – 10/2023: Temporary Assignments at Various Companies (All Fixed-Term)</li>
-      <li>08/2022 – 12/2022: Assembly Worker, V-ZUG, Zug (Fixed-Term Employment)</li>
-      <li>01/2022 – 07/2022: Driver B/E, Galliker Transport AG, Altishofen (Fixed-Term Employment)</li>
-      <li>08/2021 – 12/2021: Cleaner, School Hagendorn (Fixed-Term Employment)</li>
+      <li>12/2024 – Present: Active job search</li>
+      <li>09/2024 – 12/2024: Carpenter at Egli Zimmerei (Temporary contract)</li>
+      <li>06/2024 – 09/2024: Temporary assignments at Qero AG and Topas Personal</li>
+      <li>11/2023 – 05/2024: All-rounder, Onyx Restaurant in Baar, Zug</li>
+      <li>01/2023 – 10/2023: Temporary assignments at various companies (All temporary)</li>
     </ul>
     
- <h2 class="ausbildung">Education</h2>
- <ul>
-  <li>08/2019 – 07/2021: Apprenticeship as Maintenance Worker EBA, Municipality of Cham, Zug</li>
-  <li>08/2017 – 07/2019: Bridge Program, Zug</li>
-  <li>02/2013 – 08/2015: Secondary School, Kenya, Nairobi</li>
-  <li>03/2007 – 05/2010: Primary School, Somalia</li>
-</ul>
-
-    <h2 class="fähigkeiten">Skills</h2>
+    <h2>Education</h2>
     <ul>
-      <li>Operational Maintenance</li>
+      <li>08/2019 – 07/2021: Apprenticeship as Maintenance Practitioner EBA, Municipality of Cham, Zug</li>
+      <li>08/2017 – 07/2019: Bridge Program, Zug</li>
+      <li>02/2013 – 08/2015: Secondary School, Nairobi, Kenya</li>
+      <li>03/2007 – 05/2010: Primary School, Somalia</li>
+    </ul>
+    
+    <h2>Skills</h2>
+    <ul>
+      <li>Facility Maintenance</li>
       <li>Carpentry and Woodworking</li>
       <li>Assembly and Production</li>
-      <li>Technical Skills in Various Craft Professions</li>
-      <li>Driving and Logistics (Chauffeur B/E)</li>
-      <li>Office Administration and Support</li>
-      <li>Customer Service and Hospitality</li>
-      <li>Cleaning and Building Management</li>
-      <li>Drone Flying and Aerial Photography</li>
-      <li>Video Editing and Multimedia Production</li>
-      <li>Adaptability to Temporary and Fixed-Term Jobs</li>
-      <li>Multilingual Communication (German, English, Somali)</li>
+      <li>Technical skills in various trades</li>
+      <li>Driving and Logistics (Driver B/E)</li>
     </ul>
     
-
-    <h2 class="kompetenzbewertung">Skills assessment</h2>
-<ul>
-  <li>Customer Service: ⭐️⭐️⭐️⭐️⭐️</li>
-  <li>Microsoft Office Suite:  ⭐️⭐️⭐️</li>
-  <li>Organizational Skills: ⭐️⭐️⭐️⭐️</li>
-</ul>
-
-
-    <h2 class="sonstiges">Other</h2>
-
-     <table class="table">
-      <tr class="hobbies">
-        <th><a href="hobbies.html" target="_blank">Hobbies</a></th>
-        <th><a href="contact.html" target="_blank">ContactMe</a></th>
-      </tr>
-      <tr class="motivations">
-        <th>
-          <a href="Motivationsschreiben.html" target="_blank"
-            >Motivationsschreiben/Diplom</a
-          >
-        </th>
-        <th>
-          <a
-            href="Ausweis & Führerausweis_compressed-2-imageonline.co-merged-min.png"
-            target="_blank"
-            >Dokumentenausweis</a
-          >
-        </th>
-      </tr>
-    </table>
-
-     <script>
-      // Get current date in the format: Month Day, Year (e.g., January 25, 2025)
+    <script>
       const currentDate = new Date();
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      const dateString = currentDate.toLocaleDateString('en-US', options);  // Adjusting for German locale
-
-      // Display the date inside the "current-date" div
-      document.getElementById('current-date').innerText = dateString;
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      const dateString = currentDate.toLocaleDateString("en-US", options);
+      document.getElementById("current-date").innerText = dateString;
     </script>
     
     <footer>
