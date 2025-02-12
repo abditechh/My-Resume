@@ -5,35 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
     <style>
+      /* General body styles */
       body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         color: #333;
         margin: 0;
         padding: 0;
-        line-height: 1.6;
-        padding-bottom: 70px;
+        line-height: 1.6; /* Increased line-height for readability */
+        padding-bottom: 70px; /* Ensure space for footer */
       }
+
+      /* Header styles */
       h1 {
         text-align: center;
         color: #2c3e50;
         margin-top: 3px;
       }
+
+      h1 img {
+        width: 230px; /* Set a fixed size for the image */
+        height: 310px; /* Keep the image's height the same as the width */
+        border-radius: 50%; /* Make the image circular */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+        margin-top: 15px; /* Add some space between the text and image */
+        border: 3px solid #2c3e50; /* Add a subtle border around the image */
+      }
+
+      /* Section headers */
       h2 {
         color: #2c3e50;
         border-bottom: 2px solid #2c3e50;
         padding-bottom: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 2px; /* Increased margin for spacing */
       }
-      .contact {
-        padding-left: 77%;
-        line-height: 1.8;
+
+      /* Styling for paragraphs */
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 20px; /* Increased margin for more space */
+        line-height: 1.6; /* Increased line-height */
+        padding-left: 1%;
       }
-      .date {
-        padding-left: 78%;
-        line-height: 1.6;
-        margin-top: 25px;
+
+      /* List styling */
+      ul {
+        list-style-type: none;
+        padding-left: 29px;
       }
+
+      ul li {
+        font-size: 1.1rem;
+        margin-bottom: 1px; /* Increased margin for more spacing between items */
+      }
+
+      /* Horizontal line styling */
+      hr {
+        border: 0;
+        border-top: 2px solid #bdc3c7;
+        margin: 3px 0; /* Added extra margin for spacing */
+      }
+
+      /* Link styles */
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer styling */
       footer {
         text-align: center;
         padding: 2px;
@@ -43,55 +86,91 @@
         width: 100%;
         bottom: 0;
       }
+
+      /* Responsive styling */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p,
+        ul li {
+          font-size: 1rem;
+        }
+
+        hr {
+          margin: 20px 0;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>Abdi Abdirashid</h1>
+    <h1><img src="img.png" height="250" alt="Photo" /></h1>
+
     <div class="contact">
-      <p>🎂 February 1, 2000</p>
-      <p>☎️ <a href="tel:+41764597006">+41 76 459 70 06</a></p>
-      <p>💌 <a href="mailto:abdi.abdirashid@hotmail.com">abdi.abdirashid@hotmail.com</a></p>
-      <p>📍 <a href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten" target="_blank">Stallikerstrasse 5A, 8906 Bonstetten</a></p>
+      <p class="bday">🎂 01.02.2000</p>
+      <p>
+        ☎️
+        <a href="tel:+41764597006">+41 76 459 70 06</a>
+      </p>
+      <p>
+        💌
+        <a href="mailto:abdi.abdirashid@hotmail.com">abdi.abdirashid@hotmail.com</a>
+      </p>
+      <p class="adress">
+        📍
+        <a href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten" target="_blank">
+          Stallikerstrasse 5A, 8906 Bonstetten
+        </a>
+      </p>
     </div>
     <div class="date" id="current-date"></div>
-    
-    <h2>Summary</h2>
-    <p>Experienced professional in facility maintenance, assembly, and production with strong craftsmanship skills.<br>
-       Passionate about drone flying and video editing, continuously developing my creative and technical abilities.</p>
-    
-    <h2>Work Experience</h2>
+
+    <h2 class="summary">Summary</h2>
+    <p class="summary">
+      Experienced professional in facility maintenance, assembly, and production with strong craftsmanship skills. <br />
+      Passionate about drone flying and video editing, continuously developing my creative and technical abilities.
+    </p>
+    <p class="strong">
+      Additional documents and more about me are attached below on the left.
+    </p>
+
+    <h2 class="work-experience">Work Experience</h2>
     <ul>
-      <li>12/2024 – Present: Active job search</li>
-      <li>09/2024 – 12/2024: Carpenter at Egli Zimmerei (Temporary contract)</li>
-      <li>06/2024 – 09/2024: Temporary assignments at Qero AG and Topas Personal</li>
+      <li>12/2024 – Present: Active Job Search</li>
+      <li>
+        09/2024 – 12/2024: Carpenter at Egli Zimmerei (Fixed-term employment)
+      </li>
+      <li>
+        06/2024 – 09/2024: Temporary Assignments at Qero AG and Topas Personal
+      </li>
       <li>11/2023 – 05/2024: All-rounder, Onyx Restaurant in Baar, Zug</li>
-      <li>01/2023 – 10/2023: Temporary assignments at various companies (All temporary)</li>
+      <li>
+        01/2023 – 10/2023: Temporary Assignments at Various Companies (All Fixed-term)
+      </li>
     </ul>
-    
-    <h2>Education</h2>
+
+    <h2 class="education">Education</h2>
     <ul>
-      <li>08/2019 – 07/2021: Apprenticeship as Maintenance Practitioner EBA, Municipality of Cham, Zug</li>
+      <li>
+        08/2019 – 07/2021: Apprenticeship as Maintenance Practitioner EBA, Municipality of Cham, Zug
+      </li>
       <li>08/2017 – 07/2019: Bridge Program, Zug</li>
       <li>02/2013 – 08/2015: Secondary School, Nairobi, Kenya</li>
       <li>03/2007 – 05/2010: Primary School, Somalia</li>
     </ul>
-    
-    <h2>Skills</h2>
-    <ul>
-      <li>Facility Maintenance</li>
-      <li>Carpentry and Woodworking</li>
-      <li>Assembly and Production</li>
-      <li>Technical skills in various trades</li>
-      <li>Driving and Logistics (Driver B/E)</li>
-    </ul>
-    
+
     <script>
+      // Get current date in the format: Month Day, Year (e.g., January 25, 2025)
       const currentDate = new Date();
       const options = { year: "numeric", month: "long", day: "numeric" };
       const dateString = currentDate.toLocaleDateString("en-US", options);
+
+      // Display the date inside the "current-date" div
       document.getElementById("current-date").innerText = dateString;
     </script>
-    
+
     <footer>
       <p>© Abdi Abdirashid. All rights reserved</p>
     </footer>
