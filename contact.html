@@ -30,6 +30,10 @@
         align-items: center;
         margin-bottom: 20px;
       }
+      .header .details p {
+        margin: 0;
+        color: gray;
+      }
 
       .header img {
         border-radius: 50%;
@@ -41,6 +45,7 @@
       .header .details {
         font-size: 18px;
         padding-right: 3;
+        
       }
 
       .header .details h1 {
@@ -49,32 +54,41 @@
         margin-top: 16px;
       }
 
-      .header .details p {
-        margin: 0;
-        color: gray;
-      }
-
-      .google-partner {
-        margin-top: 5px;
-      }
-
-      .google-partner img {
-        height: 20px;
-      }
-
       .contact {
         margin-top: 20px;
       }
 
-       .contact p {
+      .contact p {
         margin: 5px 0;
         padding-left: 43%;
-        
       }
 
       .contact a {
-        color: #0c0c0b;
+        color: #2422a9be;
+        width: max-content;
+        font-size: 18px;
+        position: relative;
+        cursor: pointer;
+        margin: 10px auto;
         text-decoration: none;
+      }
+
+      .contact a::after {
+        color: #555485be;
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        background-color: rgb(148, 41, 41);
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+        transform: scaleX(0);
+      }
+
+      .contact a:hover::after {
+        transform: scaleX(1);
       }
 
       .logo {
@@ -93,17 +107,14 @@
         margin-left: 10px;
       }
 
-      /* Make icons red */
       .contact p span,
       .social-icons img {
         color: rgba(28, 2, 2, 0.097);
         filter: invert(25%) sepia(820%) saturate(4000%) hue-rotate(0deg) brightness(80%) contrast(90%);
         height: 28px;
-        
-        
       }
 
-       hr {
+      hr {
         border-top: solid rgb(137, 9, 46);
         margin-top: 4%;
         margin-bottom: 30px;
@@ -112,10 +123,44 @@
 
       .slash {
         color: red;
-        
         filter: invert(25%) sepia(820%) saturate(4000%) hue-rotate(0deg) brightness(80%) contrast(90%);
       }
-      
+
+      /* Make sure the address is fully visible with a strong blue color */
+      .adress {
+        color: #516b54 !important;  /* Forcefully apply the blue color */
+        font-size: 16px;
+        cursor: pointer;
+        margin: 100px auto;
+        display: inline-block;
+       
+      }
+
+      .underline-part {
+        color: #516b54 !important;/* Make sure blue color is applied specifically to the span */
+        position: relative;
+        font-size: 16px;
+       
+       
+      }
+
+      .underline-part::after {
+        content: "";
+        position: absolute;
+        bottom: -2px; /* Refined positioning for the underline */
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: rgb(143, 39, 39);
+        transition: transform 0.3s ease-in-out;
+        transform: scaleX(0);
+        transform-origin: left center; /* Start scaling from left */
+      }
+   
+
+      .underline-part:hover::after {
+        transform: scaleX(1);
+      }
     </style>
   </head>
   <body>
@@ -124,7 +169,7 @@
         <img src="img.png" alt="Abdi Abdirashid" />
         <div class="details">
           <h1>Abdi Abdirashid</h1>
-          <p>Dedicated worker seeking opportunities.</p>
+          <p>Engagierter Arbeiter auf der Suche nach Möglichkeiten.</p>
         </div>
       </div>
       <hr />
@@ -137,18 +182,21 @@
           💌
           <a href="mailto:abdi.abdirashid@hotmail.com">abdi.abdirashid@hotmail.com</a>
         </p>
-       <p>📍 Stallikerstrasse 5A, 8906 Bonstetten</p>
+        <p class="adress">
+          📍<a href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten" target="_blank"><span class="underline-part">Stallikerstrasse 5A, 8906 Bonstetten</span>
+        </p></a>
       </div>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/abdi-abdirashid-09aa81294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BH4V9iTssSPi0F7SisuN3yw%3D%3D" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/abdi-abdirashid-09aa81294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BH4V9iTssSPi0F7SisuN3yw%3D%3D"
+          target="_blank"
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
             alt="LinkedIn Logo"
           />
         </a>
-        <a href="https://www.linkedin.com/in/your-profile-name" target="_blank">
-        
-        </a><span class="slash" >────୨ৎ────</span> 
+        <span class="slash">────୨ৎ────</span>
       </div>
     </div>
   </body>
