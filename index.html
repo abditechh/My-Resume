@@ -79,7 +79,7 @@
       /* Footer styling */
       footer {
         text-align: center;
-        padding: 2px;
+        padding: 0px;
         background-color: #2c3e50;
         color: white;
         position: fixed;
@@ -103,11 +103,15 @@
         }
       }
 
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
       .table {
         width: 200px;
         text-align: left;
-        
-        
       }
 
       /* Specific class styling */
@@ -280,7 +284,7 @@
       my creative and technical abilities.
     </p>
     <p class="strong">
-     Additional documents and more information about me are attached below,
+      Additional documents and more information about me are attached below,
       with clickable links at the very bottom.
     </p>
 
@@ -305,17 +309,18 @@
       <li>
         01/2022 – 07/2022: "Driver B/E, Galliker Transport AG, Altishofen
         (temporary employment relationship)
-      <li>
-        08/2021 – 12/2021: "Facility Maintenance, School Hagendorn (fixed-term)"  
+      </li>
 
-      
+      <li>
+        08/2021 – 12/2021: "Facility Maintenance, School Hagendorn (fixed-term)"
       </li>
     </ul>
 
     <h2 class="ausbildung">Education</h2>
     <ul>
       <li>
-        08/2019 – 07/2021: Apprenticeship as a Maintenance Practitioner EBA, Municipality of Cham, Zug
+        08/2019 – 07/2021: Apprenticeship as a Maintenance Practitioner EBA,
+        Municipality of Cham, Zug
       </li>
       <li>08/2017 – 07/2019: Brückenangebot, Zug</li>
       <li>02/2013 – 08/2015: Secondary School, Kenia, Nairobi</li>
@@ -333,7 +338,7 @@
       <li>Customer service and hospitality</li>
       <li>Cleaning and building management</li>
       <li>Drone flying, aerial photography, and video editing</li>
-      
+
       <li>Adaptability to temporary and fixed-term roles</li>
       <li>Multilingual communication (German, English, Somali)</li>
     </ul>
