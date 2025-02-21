@@ -4,52 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hobbies</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: #2c3e50;
+    }
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+      padding-bottom: 20px;
+      background: rgba(222, 209, 209, 0.8);
+      max-width: 900px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      
+    }
+    h1 {
+      text-align: center;
+    }
+    p, ul {
+      padding-left: 15px;
+    }
+  </style>
 </head>
 <body>
-  <style>
-  h1 {
-          color: #2c3e50;
-          padding-left: 15;
-        }
-        p {
-          padding-left: 24;
-        }
-        body {
-          background-color: hwb(242 42% 7% / 0.553);
-        }
-        
-      </style>
-      <h1>Hobbies</h1>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="theee dolder.MOV" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-      <p>
-        In my free time, I enjoy programming and taking on new challenges in software development, which allows me to continuously improve my technical skills.
-      </p>
-      <ul>
-        <li>
-          On weekends, I often go drone flying with my roommate. This combines my passion for technology with the thrill of outdoor adventures.
-        </li>
-        <li>
-          am also passionate about fitness and make sure to integrate training and movement into my daily routine to promote both my physical and mental health
-        </li>
-      </ul>
-
-
-
+  <div class="content">
+    <h1>Hobbies</h1>
+    <p>
+      In my free time, I enjoy programming and taking on new challenges in software development, which allows me to continuously improve my technical skills.
+    </p>
+    <ul>
+      <li>
+        On weekends, I often go drone flying with my roommate. This combines my passion for technology with the thrill of outdoor adventures.
+      </li>
+      <li>
+        I am also passionate about fitness and make sure to integrate training and movement into my daily routine to promote both my physical and mental health.
+      </li>
+    </ul>
+  </div>
 </body>
-</html>
-       
-
-
-
-
-
-
-
-
-
-      <hr />
-
-      
-    </body>
-  </head>
 </html>
