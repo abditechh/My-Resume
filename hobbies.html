@@ -7,15 +7,12 @@
   <style>
     * {
       margin: 0;
-      padding-top: 0;
-      
-      margin-bottom: 10px;
-     
+      padding: 0;
+      box-sizing: border-box;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: #2c3e50;
-      
     }
     .video-container {
       position: fixed;
@@ -40,39 +37,61 @@
     .content {
       position: relative;
       z-index: 1;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.8);
-      max-width: 0%;
-      margin: 30px auto;
-      margin-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      font-size: 14px;
-      
+      padding: 25px;
+      background: rgba(243, 161, 161, 0.85);
+      max-width:900px;
+      margin-left: 300px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+      font-size: 16px;
+      text-align: center;
+      margin-top: 5px;
     }
     h1 {
       text-align: center;
-      font-size: 18px;
+      font-size: 28px;
+      margin-bottom: 5px;
+      font-weight: 600;
     }
     p, ul {
-      padding-left: 10px;
-      font-size: 14px;
+      font-size: 16px;
+      text-align: left;
+      line-height: 1.6;
     }
-    @media (min-width: 768px) {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '\2022';
+      color: #3498db;
+      font-weight: bold;
+      display: inline-block; 
+      width: 1em;
+      margin-left: -1em;
+      position: absolute;
+      left: 0;
+    }
+    @media (max-width: 768px) {
       .content {
-        max-width: 600px;
-        font-size: 16px;
-       
+        max-width: 90%;
+        font-size: 14px;
+        padding: 20px;
       }
       h1 {
         font-size: 24px;
-       
       }
       p, ul {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="video-container">
