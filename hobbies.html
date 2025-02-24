@@ -122,5 +122,11 @@
       </li>
     </ul>
   </div>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let video = document.querySelector("video");
+      video.play().catch(error => console.log("Autoplay prevented: " + error));
+    });
+  </script>
 </body>
 </html>
