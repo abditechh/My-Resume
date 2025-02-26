@@ -23,14 +23,14 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #f4f7f6;
+        background-color: #011a5515;
         font-family: "Arial", sans-serif;
         color: #333;
       }
 
       /* Container for the business card */
       .container {
-        background-color: #efebeb;
+        background-color: #3865f909;
         padding: 40px;
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -42,11 +42,11 @@
       /* Business Card Styling */
       .business-card {
         background-color: #dadada;
-        border: 1px solid #e0e0e0;
-        padding: 28px;
+        border: 1px solid #5f37a50f;
+        padding: 5px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        
       }
 
       .header {
@@ -54,17 +54,20 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        flex-wrap: wrap; /* Ensures that elements wrap on smaller screens */
       }
 
       .header img {
-        border-radius: 60%;
+        border-radius: 50%;
         width: 120px;
         height: 120px;
         margin-right: 20px;
+        max-width: 100%; /* Ensures responsiveness on small screens */
       }
 
       .header .details {
         font-size: 18px;
+        text-align: center; /* Centers text */
       }
 
       .header .details h1 {
@@ -86,9 +89,12 @@
 
       .contact p {
         display: flex;
-        align-items: center;
+       flex-wrap: wrap;
         margin: 10px 0;
-        padding-left: 150px;
+        padding-left: 148px;
+        
+        
+       /* Centers the contact info */
       }
 
       .contact p i {
@@ -124,8 +130,9 @@
         margin-top: 20px;
         display: flex;
         justify-content: start;
-        gap: 22px;
+       
         padding-left: 15px;
+        justify-content: start; /* Center social icons */
       }
 
       .social-icons a {
@@ -155,10 +162,56 @@
 
         .header img {
           margin-bottom: 15px;
+          width: 100px; /* Adjust image size for smaller screens */
         }
 
         .contact p {
           font-size: 16px;
+          padding-left: 0; /* Remove padding for mobile devices */
+        }
+
+        .contact p a {
+          font-size: 14px; /* Adjust link size for small screens */
+        }
+
+        .social-icons {
+          flex-direction: column; /* Stack social icons vertically */
+          gap: 15px;
+          justify-content: center; /* Center align social icons */
+        }
+
+        .social-icons a {
+          font-size: 20px; /* Adjust social icon size */
+        }
+      }
+
+      /* Specific adjustments for very small screens */
+      @media (max-width: 390px) { /* iPhone 14 size */
+        .container {
+          padding: 20px;
+          width: 90%;
+        }
+
+        .header img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .header .details h1 {
+          font-size: 22px;
+        }
+
+        .contact p {
+          font-size: 14px;
+          padding-left: 0;
+        }
+
+        .contact p a {
+          font-size: 14px;
+        }
+
+        .social-icons a {
+          font-size: 18px;
         }
       }
     </style>
@@ -171,7 +224,7 @@
           <img src="img.png" alt="Abdi Abdirashid" />
           <div class="details">
             <h1>Abdi Abdirashid</h1>
-            <p>Dedicated Worker Seeking Opportunities</p>
+            <p>Engagierter Arbeiter, der nach Möglichkeiten sucht</p>
           </div>
         </div>
         <hr />
@@ -182,25 +235,17 @@
           </p>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:abdi.abdirashid@hotmail.com"
-              >abdi.abdirashid@hotmail.com</a
-            >
+            <a href="mailto:abdi.abdirashid@hotmail.com">abdi.abdirashid@hotmail.com</a>
           </p>
           <p>
             <i class="fas fa-map-marker-alt"></i>
-            <a
-              href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten"
-              target="_blank"
-            >
+            <a href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten" target="_blank">
               Stallikerstrasse 5A, 8906 Bonstetten
             </a>
           </p>
         </div>
         <div class="social-icons">
-          <a
-            href="https://www.linkedin.com/in/abdi-abdirashid-09aa81294/"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/abdi-abdirashid-09aa81294/" target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
