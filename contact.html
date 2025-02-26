@@ -4,200 +4,208 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ContactMe</title>
+    <!-- Link to Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      /* Reset body margin and padding */
+      * {
         margin: 0;
-        padding-right: 20%;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Full-page layout */
+      body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: hwb(242 42% 7% / 0.553);
-        width: 600px;
-        padding-top: 1%;
+        height: 100vh;
+        background-color: #f4f7f6;
+        font-family: "Arial", sans-serif;
+        color: #333;
       }
 
+      /* Container for the business card */
+      .container {
+        background-color: #efebeb;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+      }
+
+      /* Business Card Styling */
       .business-card {
-        background-color: rgb(179, 132, 132);
-        border: 1px solid #351f1f;
-        padding: 20px;
-        border-radius: 190px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #dadada;
+        border: 1px solid #e0e0e0;
+        padding: 28px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
 
       .header {
         display: flex;
+        justify-content: center;
         align-items: center;
         margin-bottom: 20px;
       }
-      .header .details p {
-        margin: 0;
-        color: gray;
-      }
 
       .header img {
-        border-radius: 50%;
-        width: 150px;
-        height: 180px;
-        margin-right: 40px;
+        border-radius: 60%;
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
       }
 
       .header .details {
         font-size: 18px;
-        padding-right: 3;
-        
       }
 
       .header .details h1 {
         margin: 0;
-        font-size: 24px;
-        margin-top: 16px;
+        font-size: 26px;
+        color: #333;
+      }
+
+      .header .details p {
+        color: #888;
+        font-size: 16px;
       }
 
       .contact {
         margin-top: 20px;
+        font-size: 18px;
+        color: #444;
       }
 
       .contact p {
-        margin: 5px 0;
-        padding-left: 43%;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        padding-left: 150px;
+      }
+
+      .contact p i {
+        margin-right: 10px; /* Space between icon and link */
+        color: #1a73e8; /* Default icon color */
+        transition: color 0.3s ease; /* Smooth transition for icon color change */
+      }
+
+      .contact p i:hover {
+        color: #067cfa; /* Icon color change on hover */
+      }
+
+      /* Separate hover effect for the link */
+      .contact p a {
+        color: #0a0a13; /* Default link color */
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease; /* Smooth transition for link color change */
+      }
+
+      .contact p a:hover {
+        color: #1b84ee; /* Darker blue for the link on hover */
       }
 
       .contact a {
-        color: #2422a9be;
-        width: max-content;
-        font-size: 18px;
-        position: relative;
-        cursor: pointer;
-        margin: 10px auto;
+        color: #1a73e8; /* Default link color */
         text-decoration: none;
-      }
-
-      .contact a::after {
-        color: #555485be;
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        height: 2px;
-        width: 100%;
-        left: 0;
-        background-color: rgb(148, 41, 41);
-        transition: 0.3s;
-        transition-timing-function: ease-in-out;
-        transform: scaleX(0);
-      }
-
-      .contact a:hover::after {
-        transform: scaleX(1);
-      }
-
-      .logo {
-        text-align: left;
-        margin-top: 20px;
-      }
-
-      .logo img {
-        height: 60px;
+        font-size: 16px;
+        padding-left: 5px;
       }
 
       .social-icons {
-        margin-top: 25px;
+        margin-top: 20px;
         display: flex;
-        gap: 15px;
-        margin-left: 10px;
+        justify-content: start;
+        gap: 22px;
+        padding-left: 15px;
       }
 
-      .contact p span,
-      .social-icons img {
-        color: rgba(28, 2, 2, 0.097);
-        filter: invert(25%) sepia(820%) saturate(4000%) hue-rotate(0deg) brightness(80%) contrast(90%);
-        height: 28px;
+      .social-icons a {
+        font-size: 24px;
+        color: #1a73e8;
+        transition: color 0.3s ease;
       }
 
-      hr {
-        border-top: solid rgb(137, 9, 46);
-        margin-top: 4%;
-        margin-bottom: 30px;
-        margin-left: 43%;
+      .social-icons a:hover {
+        color: #0056b3;
       }
 
-      .slash {
-        color: red;
-        filter: invert(25%) sepia(820%) saturate(4000%) hue-rotate(0deg) brightness(80%) contrast(90%);
+      .footer {
+        margin-top: 30px;
+        border-top: 2px solid #e0e0e0;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #777;
       }
 
-      /* Make sure the address is fully visible with a strong blue color */
-      .adress {
-        color: #516b54 !important;  /* Forcefully apply the blue color */
-        font-size: 16px;
-        cursor: pointer;
-        margin: 100px auto;
-        display: inline-block;
-       
-      }
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          text-align: center;
+        }
 
-      .underline-part {
-        color: #516b54 !important;/* Make sure blue color is applied specifically to the span */
-        position: relative;
-        font-size: 16px;
-       
-       
-      }
+        .header img {
+          margin-bottom: 15px;
+        }
 
-      .underline-part::after {
-        content: "";
-        position: absolute;
-        bottom: -2px; /* Refined positioning for the underline */
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: rgb(143, 39, 39);
-        transition: transform 0.3s ease-in-out;
-        transform: scaleX(0);
-        transform-origin: left center; /* Start scaling from left */
-      }
-   
-
-      .underline-part:hover::after {
-        transform: scaleX(1);
+        .contact p {
+          font-size: 16px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="Kontakt">
-      <div class="header">
-        <img src="img.png" alt="Abdi Abdirashid" />
-        <div class="details">
-          <h1>Abdi Abdirashid</h1>
-          <p>Dedicated worker seeking opportunities.</p>
+    <div class="container">
+      <!-- Business Card Section -->
+      <div class="business-card">
+        <div class="header">
+          <img src="img.png" alt="Abdi Abdirashid" />
+          <div class="details">
+            <h1>Abdi Abdirashid</h1>
+            <p>Dedicated Worker Seeking Opportunities</p>
+          </div>
+        </div>
+        <hr />
+        <div class="contact">
+          <p>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+41764597006">+41 76 459 70 06</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:abdi.abdirashid@hotmail.com"
+              >abdi.abdirashid@hotmail.com</a
+            >
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten"
+              target="_blank"
+            >
+              Stallikerstrasse 5A, 8906 Bonstetten
+            </a>
+          </p>
+        </div>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/abdi-abdirashid-09aa81294/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </div>
-      <hr />
-      <div class="contact">
-        <p>
-          ☎️
-          <a href="tel:+41764597006 ">+41 76 459 70 06</a>
-        </p>
-        <p>
-          💌
-          <a href="mailto:abdi.abdirashid@hotmail.com">abdi.abdirashid@hotmail.com</a>
-        </p>
-        <p class="adress">
-          📍<a href="https://www.google.com/maps?q=Stallikerstrasse+5A,+8906+Bonstetten" target="_blank"><span class="underline-part">Stallikerstrasse 5A, 8906 Bonstetten</span>
-        </p></a>
-      </div>
-      <div class="social-icons">
-        <a
-          href="https://www.linkedin.com/in/abdi-abdirashid-09aa81294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BH4V9iTssSPi0F7SisuN3yw%3D%3D"
-          target="_blank"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-            alt="LinkedIn Logo"
-          />
-        </a>
-        <span class="slash">────୨ৎ────</span>
-      </div>
+      <div class="footer">© 2025 Abdi Abdirashid | All Rights Reserved</div>
     </div>
   </body>
 </html>
