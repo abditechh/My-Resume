@@ -16,6 +16,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      background-color: #000; /* Ensuring background contrast */
     }
     .video-container {
       position: fixed;
@@ -44,7 +45,7 @@
       background: rgba(255, 255, 255, 0.6); /* Adjusted for transparency */
       max-width: 1200px;
       border-radius: 12px;
-     box-shadow: 0 6px 15px rgba(1, 30, 247, 0.2);
+      box-shadow: 0 6px 15px rgba(1, 30, 247, 0.2);
       font-size: 16px;
       text-align: center;
       backdrop-filter: blur(0px); /* Blurred background effect */
@@ -54,7 +55,7 @@
       font-size: 28px;
       margin-bottom: 5px;
       font-weight: 600;
-       color: #314a62;
+      color: #314a62;
     }
     p, ul {
       font-size: 16px;
@@ -72,7 +73,7 @@
     }
     ul li::before {
       content: '\2022';
-       color: #2e7e2e;
+      color: #2e7e2e;
       font-weight: bold;
       display: inline-block; 
       width: 1em;
@@ -101,27 +102,29 @@
 </head>
 <body>
   <div class="video-container">
-    <video autoplay muted loop playsinline webkit-playsinline>
-    <source src="video (1).mp4" type="video/mp4">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto">
+      <source src="video (1).mp4" type="video/mp4">
+      <source src="video (1).webm" type="video/webm">
       Your browser does not support the video tag.
     </video>
   </div>
 
   <div class="content">
     <h1>Hobbies</h1>
- <p>
-  In my free time, I enjoy programming and taking on new challenges in software development, which allows me to continuously improve my technical skills.
-</p>
-<ul>
-  <li>
-    On weekends, I often go drone flying with my roommate. This combines my passion for technology with the thrill of outdoor adventures.
-  </li>
-  <li>
-    I am also passionate about fitness and make sure to integrate training and movement into my daily routine to promote both my physical and mental health.
-  </li>
-</ul>
+    <p>
+      In my free time, I enjoy programming and taking on new challenges in software development, which allows me to continuously improve my technical skills.
+    </p>
+    <ul>
+      <li>
+        On weekends, I often go drone flying with my roommate. This combines my passion for technology with the thrill of outdoor adventures.
+      </li>
+      <li>
+        I am also passionate about fitness and make sure to integrate training and movement into my daily routine to promote both my physical and mental health.
+      </li>
+    </ul>
   </div>
-   <script>
+  
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
       let video = document.querySelector("video");
       video.play().catch(error => console.log("Autoplay prevented: " + error));
